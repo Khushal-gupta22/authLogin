@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
-import loginButton from "./assets/loginButton.png";
+// import loginButton from "./assets/loginButton.png";
+import googleLogin from "./assets/googleLogo.svg";
+// import { useNavigate } from "react-router-dom";
+import "./GoogleLoginComp.css";
 
 function GoogleLoginComp() {
   const [user, setUser] = useState([]);
   const [profile, setProfile] = useState(false);
+  // const navigate = useNavigate();
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => setUser(codeResponse),
@@ -50,8 +54,14 @@ function GoogleLoginComp() {
           <button onClick={logOut}>Log out</button>
         </div>
       ) : (
-        <div>
-          <img className="" src={loginButton} alt="" onClick={() => login()} />
+        <div className="container">
+          {/* <img className="" src={loginButton} alt="" onClick={() => login()} /> */}
+          <div className="content-wrapper">
+            <button className="loginButton" onClick={() => login()}>
+              <img src={googleLogin} />
+              <span>Sign in with Google</span>
+            </button>
+          </div>
         </div>
       )}
     </div>

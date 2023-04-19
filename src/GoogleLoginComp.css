@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.loginButton {
+  scale: calc(1.102);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3367d6;
+  border: none;
+  border-radius: 5.5px;
+  cursor: pointer;
+  padding: 30px 20px;
+  height: 51px;
+}
+
+.loginButton img {
+  width: 45.4px;
+  height: 45.3px;
+  border-radius: 100%;
+  scale: calc(0.8);
+}
+
+.loginButton span {
+  font-family: Poppins;
+  scale: calc(0.85);
+  background-color: #3367d6;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
